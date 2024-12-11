@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalQuestions = 5;
     let timeLeft = 5 * 60;
 
-    // Soruları gösterme fonksiyonu
+    
     function showQuestion(questionNumber) {
         for (let i = 1; i <= totalQuestions; i++) {
             const question = document.getElementById(`question-${i}`);
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Zamanlayıcı fonksiyonu
+    
     const timerInterval = setInterval(function () {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 1000);
 
-    // Sonuçları hesapla
+    
     function calculateScore() {
         let correctAnswers = 0;
         let wrongAnswers = 0;
@@ -73,10 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
         alert(`Sınav Tamamlandı! \nDoğru: ${correctAnswers} \nYanlış: ${wrongAnswers} \nPuanınız: ${totalScore}`);
     }
 
-    // İlk soruyu göster
+    
     showQuestion(currentQuestion);
 
-    // "İleri" butonuna tıklama
+    
     nextButton.addEventListener('click', function () {
         if (currentQuestion < totalQuestions) {
             currentQuestion++;
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // "Geri" butonuna tıklama
+    
     previousButton.addEventListener('click', function () {
         if (currentQuestion > 1) {
             currentQuestion--;
